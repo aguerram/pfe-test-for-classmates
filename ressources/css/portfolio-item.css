@@ -1,0 +1,53 @@
+/*!
+ * Start Bootstrap - Portfolio Item HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 10px 0;
+    text-align: center;
+
+}
+.col-md-8{
+    margin-top: 1%;
+}
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.copyright {
+    display: inline-block;
+}
+.col-md-4 .span3 .well .well-large .offset4{
+    background-color: #e9e9e9;
+}
+.monter{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    display: inline-block;
+}
+.remarque{
+    color: red;
+}
+
+.container{
+    background-color: white;
+    box-shadow: 1px 1px 20px #555;
+}
+button{
+    width:250px;
+}
+.button_nav{
+    text-align: center;
+    margin-left: auto;
+    margin-left: auto;
+    margin-top: 0%;
+}
