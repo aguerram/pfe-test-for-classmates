@@ -48,11 +48,11 @@ break;
 }
 
 $select0 = "SELECT * FROM " . $table_pfe . " WHERE valide='1' AND `filiere`='" . $filiere . "'  "  ;
-$result0 = mysql_query($select0,$con) or die ('Erreur : '.mysql_error() );
-$total = mysql_num_rows($result0);
+$result0 = mysqli_query($con,$select0) or die ('Erreur : '.mysqli_error() );
+$total = mysqli_num_rows($result0);
 
 $var=0;
-while($row = mysql_fetch_array($result0)) {
+while($row = mysqli_fetch_array($result0)) {
 
 if($row['nom1']) {
 
@@ -101,7 +101,7 @@ $prenom[$var]	 =	($row['prenom3']);
 $var=$var+1;
 }
 
-array_multisort($nom, $prenom, $encadrant, $sujet, $note, $groupe_label); 
+//array_multisort($nom, $prenom, $encadrant, $sujet, $note, $groupe_label); 
 
 
 
@@ -145,13 +145,13 @@ fclose($fp) ;
 
 $select0 = 'SELECT * FROM ' . $table_pfe . ' WHERE (INSTR( encadrant , "' . $encadrant . '" )) AND valide=\'1\' '  ;
 
-$result0 = mysql_query($select0,$con) or die ('Erreur : '.mysql_error() );
-$total = mysql_num_rows($result0);
+$result0 = mysqli_query($con,$select0) or die ('Erreur : '.mysqli_error() );
+$total = mysqli_num_rows($result0);
 
 
 //echo $total ;
 $var=0;
-while($row = mysql_fetch_array($result0)) {
+while($row = mysqli_fetch_array($result0)) {
 
 $username[$var]	 =	($row['username']);
 $password[$var]	 =	($row['password']);
@@ -393,7 +393,7 @@ else
 
 $sql = "UPDATE " . $table_pfe . " SET 	`note`='$note' 	WHERE `username`='".$username[$var-1]."'";
 
-$query = mysql_query($sql) or die(mysql_error());
+$query = mysqli_query($con,$sql) or die(mysqli_error());
 
 }
 

@@ -90,7 +90,7 @@ function verify_prof($login,$passe){
 function get_email($login){
     $dataBase = new DataBase();
     $bdd=$dataBase->connexionBdd();
-    $req = $bdd->prepare('SELECT email FROM ensas_pfe_profs WHERE login = :login  ');
+    $req = $bdd->prepare('SELECT email FROM ensas_pfe_profs WHERE nom = :login  ');
     $req->execute(array(
         ':login' => htmlspecialchars(trim($login))
     ));
