@@ -70,7 +70,6 @@ if(isset($_SESSION['username'])) {
                 $(document).ready(function(){
                     $("#nav_mod_pfe").click(function(){
                         $("#main_content").load("downloads.php");
-
                     });
                     $("#nav_list_pfe").click(function(){
                         if(list_show==-1){
